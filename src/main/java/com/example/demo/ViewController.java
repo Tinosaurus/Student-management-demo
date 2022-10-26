@@ -17,4 +17,9 @@ public class ViewController {
         return "courses";
     }
 
+    @RequestMapping("/addStudentForm")
+    public String AddStudentForm(){
+        return "addstudentform";
+    }
+
 }

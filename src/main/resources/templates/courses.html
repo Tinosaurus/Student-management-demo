@@ -1,1 +1,47 @@
-placeholder 2 :D
+<!DOCTYPE HTML>
+ <html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <meta charset="UTF-8"/>
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>
+        <script> $(function(){ $("#header").load("header.html");  }); </script> 
+    </head>
+    <body>
+        <div id="header"></div>
+
+        <div class="container">
+            <table>
+                <td class="col-md-6">
+                    <h2 scope="col">Kaikki Kurssit</h2>
+                </td>
+                <td>
+                    <button>
+                        <form method="get" action="/courseRedirect">
+                            <select onchange="this.form.submit()" name="courseType">
+                                <option value="" disabled selected>Luo Kurssi</option>
+                                <option value="OnlineCourse">Etäkurssi</option>
+                                <option value="ClassroomCourse">Lähiopetuskurssi</option>
+                            </select>
+                        </form>
+                    </button>
+                </td>
+            </table>
+            
+            <p>Klikkaa kurssin nimestä saadaksesi lisätietoa</p>
+
+            <table class="table" border="0" padding="4">
+                <thead>
+                    <tr>
+                        <th scope="col">Tunnus</th>
+                        <th scope="col">Kurssin Nimi</th>
+                        <th scope="col">OSP</th>
+                        <th scope="col">Lisätiedot</th>
+                        <th scope="col">Poista Kurssi</th>
+                    </tr>
+                </thead>
+            </table>
+
+        </div>
+    </body>
+</html>
+        
